@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_dakar.controller.LogInController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFD700;">
+         <children>
+            <Label layoutX="127.0" layoutY="35.0" text="Dakar 2020 Saudi Arabia" textFill="#fffefe">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="136.0" layoutY="135.0" prefHeight="25.0" prefWidth="100.0" text="Username:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="138.0" layoutY="187.0" prefHeight="25.0" prefWidth="100.0" text="Password:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameField" layoutX="250.0" layoutY="135.0" prefHeight="30.0" prefWidth="180.0" />
+            <PasswordField fx:id="passwordField" layoutX="250.0" layoutY="186.0" prefHeight="30.0" prefWidth="180.0" />
+            <Label fx:id="errorLabel" layoutX="224.0" layoutY="236.0" textFill="#cf0e0e" />
+            <Button layoutX="250.0" layoutY="271.0" mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="45.0" prefWidth="80.0" style="-fx-background-color: #FFF8DC;" text="Login">
+               <effect>
+                  <ColorAdjust brightness="-0.14" contrast="1.0" />
+               </effect></Button>
+            <Button layoutX="350.0" layoutY="271.0" mnemonicParsing="false" onAction="#onRegisterButtonClick" prefHeight="45.0" prefWidth="80.0" style="-fx-background-color: #FFF8DC;" text="Register">
+               <effect>
+                  <ColorAdjust brightness="-0.14" contrast="1.0" />
+               </effect></Button>
+         </children>
+      </Pane>
+   </children>
+</GridPane>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_dakar.controller.RegisterController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFD700;">
+         <children>
+            <Label layoutX="89.0" layoutY="14.0" text="Register New Dakar Team" textFill="#fffefe">
+               <font>
+                  <Font size="37.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="88.0" layoutY="108.0" prefHeight="25.0" prefWidth="100.0" text="Username:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="88.0" layoutY="152.0" prefHeight="25.0" prefWidth="100.0" text="Password:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameField" layoutX="200.0" layoutY="107.0" prefHeight="30.0" prefWidth="210.0" />
+            <PasswordField fx:id="passwordField" layoutX="200.0" layoutY="151.0" prefHeight="30.0" prefWidth="210.0" />
+            <Label fx:id="errorLabel" layoutX="69.0" layoutY="292.0" textFill="#cf0e0e" />
+            <Button layoutX="290.0" layoutY="317.0" mnemonicParsing="false" onAction="#onRegisterButtonClick" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #FFF8DC;" text="Register">
+               <effect>
+                  <ColorAdjust brightness="-0.14" contrast="1.0" />
+               </effect></Button>
+            <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="198.0" text="Confirm Password:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="confirmPasswordField" layoutX="200.0" layoutY="196.0" prefHeight="30.0" prefWidth="210.0" />
+            <Label alignment="CENTER_RIGHT" layoutX="88.0" layoutY="239.0" prefHeight="25.0" prefWidth="100.0" text="Email:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emailField" layoutX="200.0" layoutY="238.0" prefHeight="30.0" prefWidth="210.0" />
+            <CheckBox fx:id="isAdmin" layoutX="200.0" layoutY="72.0" mnemonicParsing="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <Label alignment="CENTER_RIGHT" layoutX="69.0" layoutY="68.0" prefHeight="27.0" prefWidth="120.0" text="Administrator?">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</GridPane>

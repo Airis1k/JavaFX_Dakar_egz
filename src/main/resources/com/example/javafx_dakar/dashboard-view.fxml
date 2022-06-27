@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_dakar.controller.DashboardController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFD700;">
+         <children>
+            <Label layoutX="98.0" layoutY="25.0" text="DAKAR 2020 ARABIA" textFill="WHITE">
+               <font>
+                  <Font name="Gill Sans Ultra Bold Condensed" size="39.0" />
+               </font>
+            </Label>
+            <Pane layoutX="14.0" layoutY="74.0" prefHeight="437.0" prefWidth="803.0" style="-fx-background-color: #000000;">
+               <children>
+                  <Pane layoutX="14.0" layoutY="14.0" prefHeight="411.0" prefWidth="330.0" style="-fx-background-color: #FFD700;">
+                     <children>
+                        <TextField fx:id="idField" layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="300.0" promptText="ID (only for delete/ update)" />
+                        <TextField fx:id="teamNameField" layoutX="14.0" layoutY="48.0" prefHeight="27.0" prefWidth="300.0" promptText="Team Name" />
+                        <TextField fx:id="nameSurnameField" layoutX="14.0" layoutY="82.0" prefHeight="27.0" prefWidth="300.0" promptText="Name Surname" />
+                        <Label layoutX="14.0" layoutY="116.0" text="Sponsors:" />
+                        <CheckBox fx:id="boxField1" layoutX="37.0" layoutY="139.0" mnemonicParsing="false" text="Saudi Airlines CATERING">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="boxField2" layoutX="37.0" layoutY="158.0" mnemonicParsing="false" text="FRANCE + TV sport">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="boxField3" layoutX="37.0" layoutY="177.0" mnemonicParsing="false" text="AQUAFINA">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </CheckBox>
+                        <Label layoutX="14.0" layoutY="197.0" text="Racing Car:" />
+                        <RadioButton fx:id="radioButtonField1" layoutX="37.0" layoutY="221.0" mnemonicParsing="false" text="TOYOTA HILUX">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="radioButtonField2" layoutX="37.0" layoutY="242.0" mnemonicParsing="false" text="MINI of Nani Rroma">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="radioButtonField3" layoutX="37.0" layoutY="262.0" mnemonicParsing="false" text="PEUGEOT">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </RadioButton>
+                        <ComboBox fx:id="membersField" layoutX="14.0" layoutY="282.0" prefHeight="20.0" prefWidth="300.0" promptText="Choose member count" />
+                        <Label fx:id="errorLabel" layoutX="14.0" layoutY="319.0" />
+                        <Button layoutX="14.0" layoutY="345.0" mnemonicParsing="false" onAction="#onCreateButtonClick" prefHeight="25.0" prefWidth="120.0" text="CREATE" />
+                        <Button layoutX="14.0" layoutY="375.0" mnemonicParsing="false" onAction="#onUpdateButtonClick" prefHeight="25.0" prefWidth="120.0" text="UPDATE" />
+                        <Button layoutX="194.0" layoutY="345.0" mnemonicParsing="false" onAction="#onSearchButtonClick" prefHeight="25.0" prefWidth="120.0" text="SEARCH" />
+                        <Button layoutX="194.0" layoutY="375.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" prefHeight="25.0" prefWidth="120.0" text="DELETE" />
+                     </children></Pane>
+                  <Pane layoutX="357.0" layoutY="14.0" prefHeight="411.0" prefWidth="432.0" style="-fx-background-color: #FFD700;">
+                     <children>
+                        <TableView fx:id="tableView" prefHeight="411.0" prefWidth="432.0">
+                          <columns>
+                            <TableColumn fx:id="idColumn" prefWidth="20.5999755859375" text="ID" />
+                            <TableColumn fx:id="teamNameColumn" prefWidth="78.79998779296875" text="TEAM_NAME" />
+                              <TableColumn fx:id="nameSurnameColumn" prefWidth="104.79995727539062" text="NAME_SURNAME" />
+                              <TableColumn fx:id="sponsorsColumn" prefWidth="74.0" text="SPONSORS" />
+                              <TableColumn fx:id="racingCarColumn" prefWidth="86.20001220703125" text="RACING_CARS" />
+                              <TableColumn fx:id="membersColumn" prefWidth="81.79998779296875" text="MEMBERS" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Label alignment="CENTER_RIGHT" layoutX="596.0" layoutY="30.0" prefHeight="16.0" prefWidth="70.0" text="Login name:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="596.0" layoutY="50.0" prefHeight="16.0" prefWidth="70.0" text="Role:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="nameLabel" layoutX="674.0" layoutY="30.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="groupLabel" layoutX="674.0" layoutY="50.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Button layoutX="760.0" layoutY="13.0" mnemonicParsing="false" onAction="#onLogOutButtonClick" text="Log out" />
+         </children>
+      </Pane>
+   </children>
+</GridPane>
